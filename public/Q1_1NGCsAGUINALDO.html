@@ -2,25 +2,25 @@
 <body>
     <p> Hello </p>
     <script>
-        let age = window.prompt = alert("What is your age?", "13");
-        let maxAge = window.prompt = alert("What is your max age?", "10000000000");
-        let numPerDay = window.prompt = alert("How many number per day?", "50");
+        let age = window.prompt("What is your age?", "13");
+        let maxAge = window.prompt("What is your max age?", "10000000000");
+        let numPerDay = window.prompt("How many number per day?", "50");
         
         document.write(age);
         document.write(maxAge);
         document.write(numPerDay);
 
         
-        let sure = window.confirm = alert(`Are you sure? ${age} ${maxAge}, ${numPerDay}`);
+        let sure = window.confirm(`Are you sure? ${age} ${maxAge}, ${numPerDay}`);
         {
             totalRequired = (numPerDay * 365)*(maxAge - age);
         }
-        
-        if(true){
-            console.write("You will need " + totalRequired + " kutsinta to last you until the ripe old age of " + maxAge);
+
+        if(sure == true){
+            document.write("You will need " + totalRequired + " kutsinta to last you until the ripe old age of " + maxAge);
         }
         else{
-            console.write("Run code again");
+            document.write("Run code again");
         }
 
         
