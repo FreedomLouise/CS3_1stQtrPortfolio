@@ -10,9 +10,12 @@
         document.write(maxAge);
         document.write(numPerDay);
 
-        totalRequired = (numPerDay * 365)*(maxAge - age);
-
+        
         let sure = window.confirm = alert(`Are you sure? ${age} ${maxAge}, ${numPerDay}`);
+        {
+            totalRequired = (numPerDay * 365)*(maxAge - age);
+        }
+        
         if(true){
             console.write("You will need " + totalRequired + " kutsinta to last you until the ripe old age of " + maxAge);
         }
