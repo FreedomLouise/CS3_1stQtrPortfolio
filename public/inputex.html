@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> Sample use of the input tag</h2>
+        <label></br> 
+            what is your greeting?
+            <input id = "greeting" />
+        </label>
+        <button onclick = " checkGreet()"> Show Greeting </button> </body> </p>
+        <p>Result: <span id="greet"> </span></p>
+        <script>
+            function checkGreet() {
+                let dGreet = greeting.value
+                greet.innerHTML = '<p><b> ${dGreet} </b></p>'; //newer verison and shortcurt
+            }
+        </script>
+    </body>
+</html>
