@@ -3,32 +3,43 @@
     <body>
         <h2> Q1 2nd Graded Exercise submitted by Freedom Louise Aguinaldo of 9Cesium </h2>
         <label>
-            <input id = "Meal Price" />
+            Meal Price:
+            <input id = "mealPrice" />
         </label>
-        <button onclick = " checkMealPrice()"> Show MealPrice </button> </body> </p>
+        
         <label>
-            <input id = "Tip" />
+            Tip:
+            <input id = "tip" />
         </label>
-        <button onclick = " checkTip()"> Show Tip </button> </body> </p>
+        
         <label>
-            <input id = "Service Charge" />
+            Service Charge:
+            <input id = "serviceCharge" />
         </label>
-        <button onclick = " checkServiceCharge()"> Show ServiceCharge </button> </body> </p>
-    </body>
-    <script>
-        function checkMealPrice(){
-            let mp = parseFloat(document.getElementById("mealPrice").value);
-            let tip = parseFloat(document.getElementById("tip").value);
-            let sc = parseFloat(document.getElementById("serviceCharge").value);
 
-            if (Number.isNaN(mp) || Number.isNaN(tip) || Number.isNaN(sc)) {
-                alert("Please enter valid numbers for all fields.");
-            }
+        <button onclick="totalMeal()">Accept Input</button><br><br>
+        <p>Total Meal: <span id="output"></span></p>
 
-            let totalCost = mp + tip + ((sc / 100) * mp);
-            document.getElementById("output").innerHTML = totalCost.toFixed(2);
+        <script>
+        function totalMeal() {
+                document.getElementById("output").innerText = "";
+
+                let mp = parseFloat(document.getElementById("mealPrice").value);
+                let tip = parseFloat(document.getElementById("tip").value);
+                let sc = parseFloat(document.getElementById("serviceCharge").value);
+
+                if (isNaN(mp) || isNaN(tip) || isNaN(sc)) {
+                    document.getElementById("error").innerText = "Please enter valid numbers for all fields.";
+                    return;
+                }
+
+                let totalCost = mp + tip + ((sc / 100) * mp);
+                document.getElementById("output").innerText = totalCost.toFixed(2);
 
         }    
         
         </script>
+
+    </body>
+    
 </html>
