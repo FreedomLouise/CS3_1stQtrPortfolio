@@ -5,7 +5,30 @@
         <label>
             <input id = "Meal Price" />
         </label>
-        <button onclick = " checkMealPrice()"> Show Greeting </button> </body> </p>
-
+        <button onclick = " checkMealPrice()"> Show MealPrice </button> </body> </p>
+        <label>
+            <input id = "Tip" />
+        </label>
+        <button onclick = " checkTip()"> Show Tip </button> </body> </p>
+        <label>
+            <input id = "Service Charge" />
+        </label>
+        <button onclick = " checkServiceCharge()"> Show ServiceCharge </button> </body> </p>
     </body>
+    <script>
+        function checkMealPrice(){
+            let mp = parseFloat(document.getElementById("mealPrice").value);
+            let tip = parseFloat(document.getElementById("tip").value);
+            let sc = parseFloat(document.getElementById("serviceCharge").value);
+
+            if (Number.isNaN(mp) || Number.isNaN(tip) || Number.isNaN(sc)) {
+                alert("Please enter valid numbers for all fields.");
+            }
+
+            let totalCost = mp + tip + ((sc / 100) * mp);
+            document.getElementById("output").innerHTML = totalCost.toFixed(2);
+
+        }    
+        
+        </script>
 </html>
