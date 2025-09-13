@@ -3,6 +3,61 @@
   <head>
     <title>Aguinaldo Portfolio</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+      body {
+        background: linear-gradient(to bottom,  #FFF0F5, #FFF5EE);
+        font-family: Tahoma, sans-serif;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      body::after {
+        content: "";
+        display: block;
+        height: 120px;
+        background-image: radial-gradient(black, transparent 15%);
+        background-size: 12px 12px;
+        opacity: 0.1;
+        margin-top: auto;
+      }
+
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      nav li {
+        margin: 15px 0;
+      }
+      nav a {
+        text-decoration: none;
+        color: MidnightBlue;
+        font-weight: bold;
+      }
+      nav a:hover {
+        color: PaleVioletRed;
+        text-decoration: underline;
+      }
+
+      .w3-card {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-radius: 12px;
+      }
+      .w3-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      }
+
+      img {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.2s ease;
+      }
+      img:hover {
+        transform: scale(1.03);
+      }
+    </style>
   </head>
   <body onload="myFunction()">
     <section class="w3-container">
@@ -11,20 +66,34 @@
       <script>
         function myFunction() {
           document.getElementById("demo").style.fontSize = "30px"; 
-          document.getElementById("demo").style.color = "DimGrey";
-          document.getElementById("demo").style.backgroundColor = "LightBlue";        
+          document.getElementById("demo").style.color = "MidnightBlue";
+          document.getElementById("demo").style.backgroundColor = "PaleTurquoise";        
         }
       </script>
 
-      <nav>
-        <ul>
-          <li><a href="./public/Q1_1stGraded.html">First Exercise</a></li>
-          <li><a href="./public/Q1_1NGCsAGUINALDO.html">First Non-Graded Exercise</a></li>
-          <li><a href="./public/Q12GCesiumAguinaldo.html">Second Graded Exercise</a></li>
-          <li><a href="./public/Q13GCesiumAguinaldo.html">Third Graded Exercise</a></li>
-        </ul>
-      </nav>
-      <img src="./public/aguinaldo1.jpg" alt="Portfolio Image" width="300">
+      <div class="w3-container" style="display:flex; align-items:flex-start; gap:20px;">
+     
+        <div class="w3-card w3-padding w3-white" style="width:250px;">
+          <nav>
+            <ul>
+              <li><a href="./public/Q1_1stGraded.html">First Exercise</a></li>
+              <li><a href="./public/Q1_1NGCsAGUINALDO.html">First Non-Graded Exercise</a></li>
+              <li><a href="./public/Q12GCesiumAguinaldo.html">Second Graded Exercise</a></li>
+              <li><a href="./public/Q13GCesiumAguinaldo.html">Third Graded Exercise</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div>
+          <img src="./public/aguinaldo1.jpg" alt="Portfolio Image" width="250">
+          <p style="font-size: 14px; color: gray;">
+            Reference: 
+            <a href="https://ph.pinterest.com/pin/114630753014578235/" target="_blank">
+              Pinterest
+            </a>
+          </p>
+        </div>
+      </div>
     </section>
   </body>
 </html>
